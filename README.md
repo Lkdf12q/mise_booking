@@ -16,10 +16,12 @@ REST API для онлайн-бронирования столиков в рес
 1. Клонируйте репозиторий и перейди в папку проекта:
    git clone <url>
    cd mise_booking
+   
 2. Создайте и активируйте виртуальное окружение:
 
 python -m venv venv
-Windows: venv\Scripts\activate
+
+venv\Scripts\activate
 
 3. Установите зависимости:
 
