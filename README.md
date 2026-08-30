@@ -36,9 +36,12 @@ ReDoc: http://127.0.0.1:8000/redoc
 
 # Эндпоинты
 
-POST /booking Создать брон
+POST /booking Создать бронь
+
 GET /booking Список броней (фильтр по дате)
+
 GET	/booking/{id} Получить бронь по id
+
 DELETE /booking/{id} Отменить бронь
 
 # Валидация
