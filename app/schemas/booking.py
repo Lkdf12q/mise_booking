@@ -3,11 +3,11 @@ from pydantic import BaseModel, Field, field_validator, ConfigDict
 import re
 
 class BookingCreate(BaseModel):#схема для входящих данных
-    name: str = Field(min_length= 2, description="Имя гостя")
-    phone: str = Field(description="Телефон в формате +7XXXXXXXXXX или 8XXXXXXXXXX")
-    booking_date: date = Field(description="Дата бронирования")
-    booking_time: time = Field(description="Время бронирования (12:00-22:00, только часы)")
-    guests: int = Field(ge=1, le = 12, description="Количество гостей от 1 до 12")
+    name: str = Field(min_length= 2, description="Имя гостя", examples=["Анна"])
+    phone: str = Field(description="Телефон в формате +7XXXXXXXXXX или 8XXXXXXXXXX", examples=["+79161234567"])
+    booking_date: date = Field(description="Дата бронирования", examples=["2026-09-15"])
+    booking_time: time = Field(description="Время бронирования (12:00-22:00, только часы)", examples=["18:00:00"])
+    guests: int = Field(ge=1, le = 12, description="Количество гостей от 1 до 12", examples=[4])
 
     @field_validator('name')#Валидатор для имени
     @classmethod
